@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        const saludar=()=>console.log("hola");//función arrow
+        saludar();
+
+        const saludar2=nombre/*variable*/=>console.log(`Hola ${nombre}`);//función arrow
+        saludar2("Axel");
+
+        const sumar=(a,b)=>a+b;//función arrow si se tienen 2 o mas parametros son necesarios los parentecis
+        console.log(sumar(9,9));
+
+        const funcionDeVariasLineas=()=>{
+            console.log("uno");
+            console.log("dos");
+            console.log("tres");
+        }
+        funcionDeVariasLineas();
+
+        const numeros=[1,2,3,4,5];
+        numeros.forEach((el,index)=> console.log(`${el} esta en la posición ${index}`));
+
+        const persona={
+            nombre:"Axel",
+            saludos: function() {
+                console.log(this)
+            }
+        }
+        persona.saludos();
+
+        const persona2={
+            nombre:"Axel",
+            saludos: ()=> {
+                console.log(this)//la arrow function toma el contexto global y no el del objeto
+            }
+        }
+        persona2.saludos();
+
+        //mejor manera de usar metodos en objetos
+
+        const persona3={
+            nombre:"Axel",
+            saludos(){
+                console.log(this)//la arrow function toma el contexto global y no el del objeto
+            }
+        }
+        persona3.saludos();
+    </script>
+</body>
+</html>

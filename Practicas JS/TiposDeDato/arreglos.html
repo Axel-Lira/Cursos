@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        const a=[];
+        const b=[1, true, "Axel", ["A", "B", "C",[1,2,3]]];
+        console.log(a);
+        console.log(b);
+        console.log(b.length);//numero de elementos
+        //imprimir posicion de arreglo
+        console.log(b[2]);
+        console.log(b[0]);
+        console.log(b[3][2]);
+        console.log(b[3][3][0]);
+
+        const c=Array.of("X","Y","Z",9,8,7);//se accede a prototipo array o "constructor"
+        console.log(c);
+
+        const d= Array(100).fill(false);//llena todo el arreglo con el valor asignado
+        console.log(d);
+
+        const e= new Array(1,2,3,true,false);//instanciar forma antigua
+        console.log(e);
+
+        //Los arreglos tienen diferentes metodos algunos ejemplos son
+        const colores=["Rojo","Verde","Azul"];
+        console.log(colores);
+        colores.push("Negro");//metodo para añadir elemento al final
+        console.log(colores);
+        colores.pop();//metodo quita el último elemento
+        console.log(colores);
+        //Metodo ejecuta una función por cada elemento que tenga el arreglo
+        colores.forEach(function(elemento,index){
+            console.log(`<li>"${index}"${elemento}</li>`)
+        });
+    </script>
+</body>
+</html>

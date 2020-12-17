@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        //Función Declarada
+        function estoEsUnaFuncion(){
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        //Invocación de Función
+        estoEsUnaFuncion();
+        //Se puede ejecutar en cualquier momento
+        /*estoEsUnaFuncion();
+        estoEsUnaFuncion();
+        estoEsUnaFuncion();*/
+
+        function unaFuncionQueDevuelveValores (){//Puede retonar valores primitivos o compuestos
+            return "La función ha retornado una Cadena de texto"//ignora lineas debajo de return y retorna el valor
+        }
+        let valorDeFuncion=unaFuncionQueDevuelveValores();
+        console.log(valorDeFuncion);
+
+        function saludar(nombre, edad){//funcion que recibe valores
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad}`)
+        }
+        saludar("Axel",27);
+        function saludar2(nombre="Ricardo", edad="27"){//funcion que recibe valores se pueden asignar
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad}`)
+        }
+        saludar("Axel",27);
+        saludar2();
+
+        //funcion declarada vs funciones expresadas
+        funcionDeclarada();
+        function funcionDeclarada(){//funcion declarada
+            console.log("Esto es una funcion declarada puede invocarse en cualquier parte de nuestro código incluso antes de que la función sea declarada")
+        }
+        //funcionExpresada(); no se puede accesar antes de inicializar;
+        const funcionExpresada=function(){//función anonima funcion expresada
+            console.log("Esto es una función expresada, es decir una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición, JS nos dira... Cannot access 'funcionExpresada' before initialization");
+        }
+        funcionExpresada();
+        
+    </script>
+</body>
+</html>

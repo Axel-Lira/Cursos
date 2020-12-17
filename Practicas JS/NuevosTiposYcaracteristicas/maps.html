@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Dato JavaScript</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Dato JavaScript</h1>
+    <script>
+        const mapa= new Map();//coleccion de datos como objeto primitivo
+        mapa.set("nombre","Axel");
+        mapa.set("apellido","Lira");
+        mapa.set("edad",35);
+        console.log(mapa);
+        console.log(mapa.size);
+        console.log(mapa.has("nombre"));//existe la llave?
+        console.log(mapa.has("correo"));
+        mapa.set("nombre","Ricardo Axel");
+        console.log(mapa.get("nombre"));
+        mapa.delete("edad");//eliminar elemento
+        mapa.set(19,"diecinueve");//permite llaves que no sean cadenas
+        mapa.set(false,"falso");
+        mapa.set({},"Objeto");
+        console.log(mapa);
+        for(let [key,value] of mapa){
+            console.log(`Llave: ${key}, Valor: ${value}`);
+        }
+
+        const mapa2=new Map([
+            ["nombre","Mozart"],
+            ["edad",10],
+            ["animal","perro"],
+            [null,"nulo"]
+        ]);
+        console.log(mapa2);
+
+        const llavesMapa2=[...mapa2.keys()];
+        const valoresMapa2=[...mapa2.values()];
+        console.log(llavesMapa2);
+        console.log(valoresMapa2);
+    </script>
+</body>
+</html>

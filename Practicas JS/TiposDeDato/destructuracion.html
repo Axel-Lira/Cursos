@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+
+        //Sin destructuración
+        const numeros=[1,2,3];
+        let uno=numeros[0],
+        dos=numeros[1],
+        tres=numeros[2];
+        console.log(uno,dos,tres);
+
+        //Con destructuración
+        const[one,two,three]=numeros;
+        console.log(one,two,three);
+
+        const persona={
+            nombre:"Axel",
+            apellido:"Lira",
+            edad:27
+        };
+
+        const{nombre,apellido,edad}=persona;//las variables deben llamarse igual al objeto, el orden no importa
+        console.log(nombre,apellido,edad);
+    </script>
+</body>
+</html>

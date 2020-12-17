@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+       //Cadena de Texto
+       let nombre="Axel";
+       let apellido='Lira';
+
+        //Concatenación
+        let saludo="Hola mi nomre es "+nombre+" "+apellido;
+        console.log(saludo);
+
+        //interpolacion de variables
+        //Template String
+        let despedida = `Adios ${nombre} ${apellido}`;
+        console.log(despedida);
+
+        let ul="<ul><li>Primavera</li><li>Otoño</li><li>Invierno</li><li>Verano</li></ul>";
+        console.log(ul);
+
+        let ul2=`
+        <ul>
+        <li>Primavera</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+        <li>Verano</li>
+        </ul>
+        `;
+        console.log(ul2);
+
+        let ul3="<ul>";
+        ul3+="<li>Primavera</li>";
+        ul3+="<li>Otoño</li>";
+        ul3+="<li>Invierno</li>";
+        ul3+="<li>Verano</li>";
+        console.log(ul3);
+        
+    </script>
+</body>
+</html>

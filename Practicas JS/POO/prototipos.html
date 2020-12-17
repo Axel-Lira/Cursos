@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        /*POO
+        Clases- Modelo a seguir
+        Objetos- Es una instancia de una clase
+        Atributos- Es una caracteristica o propiedad del objeto(variables dentro de un objeto)
+        Métodos- Son las acciones que un objeto puede realizar
+        */
+
+        /* //función constructora
+        function Animal(nombre,genero){
+            //Atributo
+            this.nombre=nombre;
+            this.genero=genero;
+            //Método
+            this.sonar=function(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        }
+
+        const snoopy=new Animal("Snoopy","Macho"),
+        lolaBunny=new Animal("Lola Bunny","Hembra");
+
+        console.log(snoopy);
+        console.log(lolaBunny);*/
+       
+
+        function Animal(nombre,genero){
+            //Atributo
+            this.nombre=nombre;
+            this.genero=genero;
+        }
+
+            //Método
+            Animal.prototype.sonar=function(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        const snoopy=new Animal("Snoopy","Macho"),
+        lolaBunny=new Animal("Lola Bunny","Hembra");
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        snoopy.sonar();
+        lolaBunny.sonar();
+    </script>
+</body>
+</html>

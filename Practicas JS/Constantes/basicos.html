@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        /*Primitivos se accede directamente al valor*/
+        const PI=3.1416;
+        /*PI=3.142 no se puede cambiar al ser primitivo*/
+        console.log(PI);
+        /* compuestos se accede a la referencia del valor*/
+        const persona={
+            nombre:"Axel",
+            edad:27
+        };//objeto
+        const colores=["Negro","Blanco","Azul"];//arreglo
+        console.log(persona);
+        console.log(colores);
+        /*Añadir valores*/
+        persona.correo="ricardo.axel.diaz.lira@gmail.com";//añadir elemento a objeto
+        colores.push("Anaranjado");//añadir elemento a arreglo
+        console.log(persona);
+        console.log(colores);
+    </script>
+</body>
+</html>

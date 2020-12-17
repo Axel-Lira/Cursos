@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Dato JavaScript</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Dato JavaScript</h1>
+    <script>
+        const iterable=[1,2,3,4,5];//puede ser set, map, cadena
+        /*const iterable=new Set([1,2,3,4,5]);
+        const iterable=new Map([["nombre","axel"],["apellido","Lira"],["edad",27]]);
+        const iterable="Hola a todos";*/
+        const iterador=iterable[Symbol.iterator]();//accedemos al iterador del iterable
+        console.log(iterable);
+        console.log(iterador);
+        console.log(iterador.next());
+        let next=iterador.next();
+        while(!next.done){
+            console.log(next.value);
+            next=iterador.next();
+        }
+    </script>
+</body>
+</html>

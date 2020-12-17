@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Dato JavaScript</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Dato JavaScript</h1>
+    <script>
+        function* iterable(){//* indica generador
+            yield "Hola";//return para detener la función
+            console.log("Hola a todos");
+            yield "Hola2";
+            console.log("Seguimos con más instrucciones de nuestro código")
+            yield "Hola3";
+            yield "Hola4";
+        }
+        let iterador= iterable();
+        for(let y of iterador){
+            console.log(y);
+        }
+        const arr=[...iterable()];
+        console.log(arr);
+
+        function cuadrado(valor){
+            setTimeout(()=>{
+                return console.log({valor,resultado:valor*valor})
+            },Math.random()*1000);
+        }
+
+        function* generador(){
+            console.log("Inicia generador");
+            yield cuadrado(0);
+            yield cuadrado(1);
+            yield cuadrado(2);
+            yield cuadrado(3);
+            yield cuadrado(4);
+            yield cuadrado(5);
+            console.log("Termina generador");
+        }
+        let gen=generador();
+        for(let y of gen){
+            console.log(y);
+        }
+    </script>
+</body>
+</html>

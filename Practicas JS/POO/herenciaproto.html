@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        function Animal(nombre,genero){
+            //Atributo
+            this.nombre=nombre;
+            this.genero=genero;
+        }
+
+            //Método
+            Animal.prototype.sonar=function(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        
+        //herencia prototipica
+        function Perro(nombre,genero,tamanio){
+            this.super=Animal;
+            this.super(nombre,genero);
+            this.tamanio=tamanio;
+        }
+        //herencia del superior
+        Perro.prototype =new Animal();
+        Perro.prototype.constructor=Perro;
+        //Sobre escritura de metodos
+        Perro.prototype.sonar = function(){
+            console.log("Soy un perro y mi sonido es un ladrido");
+        }
+        Perro.prototype.ladrar=function(){
+            console.log("guauu, guauuu!");
+        }
+
+        const snoopy=new Perro("Snoopy","Macho","Mediano"),
+        lolaBunny=new Animal("Lola Bunny","Hembra");
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        snoopy.sonar();
+        snoopy.ladrar();
+        lolaBunny.sonar();
+    </script>
+</body>
+</html>

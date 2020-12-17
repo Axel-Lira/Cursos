@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        console.log(console);
+        console.error("Esto es un error");
+        console.warn("Esto es un aviso");
+        console.info("Esto es un mensaje informativo");
+        console.log("Un registro de lo que ha pasado en nuestra aplicación");
+
+        let nombre="Axel",
+        apellido="Lira",
+        edad=27;
+
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(nombre,apellido,edad);
+        console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+        console.log(`Hola mi nombre es %s %s y tengo %d años`,nombre,apellido,edad);//comodines
+        console.clear();
+
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+        console.clear();
+        
+        console.group("Unidades del curso tomadas por Axel");
+        console.log("Introduccion a JS");
+        console.log("Tipos de Datos");
+        console.log("Estructuras de Control");
+        console.log("POO");
+        console.groupEnd();
+
+        console.groupCollapsed("Unidades del curso tomadas por Axel");
+        console.log("Introduccion a JS");
+        console.log("Tipos de Datos");
+        console.log("Estructuras de Control");
+        console.log("POO");
+        console.groupEnd();
+        console.clear();
+
+        console.log(console);
+        console.table(Object.entries(console));//generar tabla por cada una de las entradas
+        console.table(Object.entries(console).sort());//ordenar alfabeticamente
+        const numeros=[1,2,3,4,5],
+        vocales=["a","e","i","o","u"];
+        console.table(numeros);
+        console.table(vocales);
+        const perro={
+            nombre:"Mozart",
+            raza:"Manchester Terrier",
+            color:"Negro"
+        }
+        console.table(perro);
+        console.clear();
+
+        console.time("Cuanto tiempo tarda mi código");
+        const arreglo = Array(1000000);
+        for(let i=0;i<arreglo.length;i++){
+            arreglo[i]=i;
+        }
+        console.timeEnd("Cuanto tiempo tarda mi código");
+        //console.log(arreglo);
+        console.clear();
+
+        for(let i=0; i<=100;i++){
+            console.count("Código for");
+            console.log(i);
+        }
+        console.clear();
+
+        let x=1,
+        y=2,
+        pruebaXY="Se espera que X siempre sea menor que Y"
+        console.assert(x<y,{x,y,pruebaXY});
+        let x1=3,
+        y1=2,
+        pruebaXY1="Se espera que X siempre sea menor que Y"
+        console.assert(x1<y1,{x1,y1,pruebaXY1});
+    </script>
+</body>
+</html>

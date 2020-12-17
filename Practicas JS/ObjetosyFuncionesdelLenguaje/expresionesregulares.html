@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        /*
+        Expresiones Regulares
+        */
+        let cadena="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem"
+        let expReg=new RegExp("lorem","ig");//bandera i ignora mayus y minus bandera g busca en todo el documento y no se detiene en el primer resultado
+        
+
+        console.log(expReg.test(cadena));//comprueba que exista en la cadena
+        console.log(expReg.exec(cadena));//arreglo con información
+        
+        let expReg2=/lorem/ig;
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+
+        let expReg3=/\d/ig;//comodin numeros, busca numeros en la cadena
+        console.log(expReg3.test(cadena));
+        console.log(expReg3.exec(cadena));
+
+        let expReg4=/[0-9]/ig;//comodin rangos
+        console.log(expReg4.test(cadena));
+        console.log(expReg4.exec(cadena));
+
+        let expReg5=/lorem{1,2}/ig;//comodin rango de repeticion
+        console.log(expReg5.test(cadena));
+        console.log(expReg5.exec(cadena));
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        let fecha = new Date();
+        console.log(fecha);
+        console.log(fecha.getDate());//día del mes
+        console.log(fecha.getDay());//día de la semana D->S
+        console.log(fecha.getMonth());//posicion mes 
+        console.log(fecha.getYear());//año a partir 1900
+        console.log(fecha.getFullYear());//año en el que estamos
+        console.log(fecha.getHours());//Horas formato 24hrs
+        console.log(fecha.getMinutes());//Minuto
+        console.log(fecha.getSeconds());//Segundos
+        console.log(fecha.getMilliseconds());//milisegundos
+        console.log(fecha.toString());
+        console.log(fecha.toDateString());
+        console.log(fecha.toLocaleString());
+        console.log(fecha.toLocaleDateString());
+        console.log(fecha.toLocaleTimeString());
+        console.log(fecha.getTimezoneOffset());//uso horario en minutos
+        console.log(fecha.getUTCDate());//dia en meridiano
+        console.log(fecha.getUTCHours());//Hora en el meridiano
+        console.log(Date.now());//segundos desde el 1° de enero de 1970
+        let cumpleAxel=new Date(1993,8,26);//el mes debe ser colocado por posicion de 0->11
+        console.log(cumpleAxel);
+    </script>
+</body>
+</html>

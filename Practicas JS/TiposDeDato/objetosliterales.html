@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        let nombre="Axel",
+        edad=27;
+
+        const persona={
+            nombre:nombre,
+            edad:edad,
+            saludar:function(){
+                console.log("Hola");
+            }
+        }
+        console.log(persona);
+        persona.saludar();
+
+        const person={
+            nombre,
+            edad,
+            musica:"Under",
+            saludar(){
+                console.log("Hola Mundo");
+            }
+        }
+        console.log(person);
+        person.saludar();
+    </script>
+</body>
+</html>

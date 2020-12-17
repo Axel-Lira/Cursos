@@ -1,0 +1,10 @@
+//import {aritmetica} from "./aritmetica.js";
+import {aritmetica as calculos} from "./aritmetica.js";
+import Saludar, {PI, usuario,saludar} from "./constantes.js";
+console.log("Archivo modulosimportexport.js");
+console.log(PI,usuario);
+//console.log(aritmetica.sumar(3,4));
+console.log(calculos.sumar(3,4));
+saludar();
+let saludo=new Saludar();
+saludo;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        /*
+        Corto circuito con OR- Significa que cuando el valor de la izq siempre pueda validar a true sera el que se carga por defecto
+        Corto circuito con OR- Significa que cuando el valor de la izq siempre pueda validar a false sera el que se carga por defecto
+        */
+        function saludar(nombre){
+            nombre=nombre||"Desconocid@";
+            console.log(`Hola ${nombre}`);
+        }
+        saludar("Axel");
+        saludar();
+        console.log("cadena"||"Valor derecha");
+        console.log(19||"Valor derecha");
+        console.log(true||"Valor derecha");
+        console.log([]||"Valor derecha");
+        console.log({}||"Valor derecha");
+        console.log(false||"Valor derecha");
+        console.log(null||"Valor derecha");
+        console.log(undefined||"Valor derecha");
+        console.log(""||"Valor derecha");
+        console.log(-2||"Valor derecha");
+        console.log(0||"Valor derecha");
+
+        console.log("cadena"&&"Valor derecha");
+        console.log(19&&"Valor derecha");
+        console.log(true&&"Valor derecha");
+        console.log([]&&"Valor derecha");
+        console.log({}&&"Valor derecha");
+        console.log(false&&"Valor derecha");
+        console.log(null&&"Valor derecha");
+        console.log(undefined&&"Valor derecha");
+        console.log(""&&"Valor derecha");
+        console.log(-2&&"Valor derecha");
+        console.log(0&&"Valor derecha");
+    </script>
+</body>
+</html>

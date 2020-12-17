@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Dato JavaScript</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Dato JavaScript</h1>
+    <script>
+        this.lugar="Contexto Global";
+        function saludar(saludo, aQuien){
+            console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+        }
+        saludar("Hola", "Mozart");
+
+        const obj={
+            lugar:"Contexto Objeto"
+        }
+        saludar.call(obj,"Hola","Axel");
+        saludar.apply(obj,["Adios","Lira"]);
+
+        saludar.call(null,"Hola","Axel");
+        saludar.apply(null,["Adios","Lira"]);
+
+        const persona={
+            nombre:"Axel",
+            saludar:function(){
+                console.log(`Hola ${this.nombre}`);
+            }
+        }
+        persona.saludar();
+
+        const otraPersona={
+            saludar:persona.saludar.bind(persona)//enlazar blind
+        }
+        otraPersona.saludar();
+    </script>
+</body>
+</html>

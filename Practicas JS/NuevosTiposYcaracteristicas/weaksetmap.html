@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Dato JavaScript</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Dato JavaScript</h1>
+    <script>
+        const ws= new WeakSet();
+        let v1={"v1":1},
+        v2={"v2":2},
+        v3={"v3":3};
+        ws.add(v1);//solo pueden agregarse objetos
+        ws.add(v2);
+        console.log(ws);
+        console.log(ws.has(v1));
+        console.log(ws.has(v3));
+        ws.delete(v2);
+        console.log(ws);
+        ws.add(v2);
+        ws.add(v3);
+        console.log(ws);
+        setInterval(()=>console.log(ws),1000);
+        setTimeout(()=>{
+            v1=null;
+            v2=null;
+            v3=null;
+        }, 5000);
+
+        const wm=new WeakMap();
+        let k1={},
+        k2={},
+        k3={};
+        wm.set(k1,1);
+        wm.set(k2,2);
+        console.log(wm);
+        console.log(wm.has(k1));
+        console.log(wm.has(k3));
+        console.log(wm.get(k1));
+        console.log(wm.get(k2));
+        console.log(wm.get(k3));
+        wm.delete(k2);
+        console.log(wm);
+        wm.set(k2,2);
+        wm.set(k3,3);
+        console.log(wm);
+        setInterval(()=>console.log(wm),1000);
+        setTimeout(()=>{
+            k1=null;
+            k2=null;
+            k3=null;
+        },5000);
+    </script>
+</body>
+</html>

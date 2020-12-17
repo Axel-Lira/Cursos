@@ -1,0 +1,11 @@
+{
+    "cadena":"Axel",
+    "numero":27,
+    "booleano":true,
+    "arreglo":["correr","programar","cocinar"],
+    "objeto":{
+        "twitter":"@RicardoAxelDiaz",
+        "email":"ricardo.axel.diaz.lira@gmail.com"
+    },
+    "nulo":null
+}

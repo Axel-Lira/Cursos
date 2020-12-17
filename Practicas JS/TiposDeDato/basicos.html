@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+       //Cadena de Texto
+       let nombre="Axel";
+       let apellido='Lira';
+       let saludo=new String("Hola Mundo");//objeto nuevo tipo string
+       let lorem="      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+       console.log(nombre,apellido,saludo);
+       console.log(
+           nombre.length,
+           apellido.length,
+           saludo.length
+           );//largo de la cadena
+       console.log(
+           nombre.toUpperCase(),//Cambiar a Mayusculas
+           apellido.toLowerCase(),//Cambiar a Minusculas
+           );
+       console.log(
+           lorem.includes("amet"),//Tiene o no la palabra
+           lorem.includes("Axel")
+           );
+       console.log(
+           lorem,
+           lorem.trim()//Elimina espacios sobrantes
+           );
+       console.log(
+           lorem.split(),//Convertir cadena de texto a arreglo
+           lorem.split(" "),//Separar por espacios y crear arreglo
+           lorem.split(",")//separar por comas y crear arreglo
+           );
+    </script>
+</body>
+</html>

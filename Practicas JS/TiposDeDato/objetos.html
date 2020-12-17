@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+         let a = new String("Hola");
+         console.log(a);
+
+         const b={};
+         console.log(b);
+
+         const c= new Object();
+         console.log(c);
+
+         const axel={
+             nombre:"Axel",
+             apellidos:"Lira",
+             edad:27,
+             pasatiempos:["Leer","Escribir","Aprender"],
+             soltero:true,
+             contacto:{
+                 email:"ricardo.axel.diaz.lira@gmail.com",
+                 twitter:"@RicardoAxelDiaz",
+                 movil:"5215541741787"
+             },
+             saludar: function () {
+                 console.log("Hola :)")
+             },
+             decirMiNombre: function(){
+                 console.log(`Hola me llamo ${this.nombre} ${this.apellidos} , tengo ${this.edad} años y puedes seguirme como ${this.contacto.twitter} en twitter`)//usar valor dentro de objeto
+             }
+         }
+
+         console.log(axel);
+         console.log(axel["nombre"]);//acceder a propiedades
+         console.log(axel["apellidos"]);
+         console.log(axel.edad);//acceder a attributos o propiedades
+         console.log(axel.soltero);
+         console.log(axel.pasatiempos);
+         console.log(axel.pasatiempos[1]);
+         console.log(axel.contacto);
+         console.log(axel.contacto.twitter);
+         axel.saludar();
+         axel.decirMiNombre();
+
+         console.log(Object.keys(axel));//metodo para listar las Llaves del Objeto
+         console.log(Object.values(axel));//Metodo para listar valores del Objeto
+         console.log(axel.hasOwnProperty("nombre"));//saber si un Objeto tiene una propiedad
+         console.log(axel.hasOwnProperty("nacimiento"));
+    </script>
+</body>
+</html>

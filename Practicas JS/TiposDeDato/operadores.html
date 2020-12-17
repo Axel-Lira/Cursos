@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        /*Operadores*/
+        /*Aritmeticos + - * / % () */
+        let a= (5 + (5 - 10) * 3)/2 ;
+        let modulo =5%2//residuo de la división
+        console.log(a);
+        console.log(modulo);
+
+        /*Relacionales < > <= >= == === != !==*/
+        console.log(8>9);
+        console.log(9>8);
+        console.log(8>=9);
+        console.log(9>=8);
+        console.log(7<7);
+        console.log(7<=7);
+        
+        // = Asignación
+        //== Comparación de valor
+        //=== Comparación de valor y tipo de dato
+        console.log(7==7);
+        console.log("7"==7);
+        console.log(7===7);
+        console.log("7"===7);
+
+        //Incremento Decremento
+        let i=1;
+        console.log(i);
+        i=i+2;
+        console.log(i);
+        i+=3;
+        console.log(i);
+        i/=3;
+        console.log(i);
+        i*=3;
+        console.log(i);
+        //Operador unario
+        i++;//suma despues
+        console.log(i);
+        i--;//resta despues
+        console.log(i);
+        ++i;//suma antes
+        console.log(i);
+        --i;//resta antes
+        console.log(i);
+
+        /*Lógicos
+        ! Not:Niega. lo verdadero lo vuelve falso y viceversa
+        || Or:Cuando tengo 2 o mas condiciones si una se cumple or valida 
+        && And: Cuando tengo 2 o mas condiciones deben cumplirse todas and valida*/
+        console.log(!true);
+        console.log(!false);
+        console.log((9===9)||("9"===9));
+        console.log((9===9)&&("9"===9));
+        console.log((9===9)&&("9"==="9"));
+    </script>
+</body>
+</html>
